@@ -58,27 +58,44 @@
         </div>
 
         <!-- ================= 1. MAIN HOME PAGE SCREEN ================= -->
-              <div id="page-login" class="page-screen active flex flex-col justify-center items-center p-6 bg-black min-h-screen text-center">
-        <div class="mb-8">
-            <h1 class="text-4xl text-emerald-400 font-bold mt-4">METASPHERE</h1>
+            <div id="page-login" class="page-screen active flex flex-col items-center p-6 bg-black min-h-screen text-white">
+        <div class="w-full max-w-sm flex justify-between items-center mb-10">
+            <h1 class="text-2xl font-bold text-emerald-500">METASPHERE</h1>
+            <button class="text-xs border border-emerald-500 px-3 py-1 rounded">Support</button>
         </div>
-        <div class="w-full max-w-xs space-y-4">
-            <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-900 border border-emerald-500 text-white rounded focus:outline-none">
-            <input type="password" placeholder="Password" class="w-full p-3 bg-gray-900 border border-emerald-500 text-white rounded focus:outline-none">
-            <button onclick="navigateTo('page-home')" class="w-full bg-emerald-500 p-3 text-black font-bold rounded hover:bg-emerald-400 transition">SIGN IN</button>
+        <div class="w-full max-w-sm space-y-6">
+            <h2 class="text-xl">Welcome to Metasphere</h2>
+            <input type="email" placeholder="Enter email" class="w-full p-3 bg-gray-900 border border-emerald-500 rounded">
+            <div class="relative">
+                <input type="password" placeholder="Enter Password" class="w-full p-3 bg-gray-900 border border-emerald-500 rounded">
+                <span class="absolute right-3 top-3 text-emerald-500 text-sm">Hide</span>
+            </div>
+            <p class="text-xs text-emerald-500 cursor-pointer">Forgot password?</p>
+            <button onclick="navigateTo('page-home')" class="w-full bg-red-600 p-3 font-bold rounded">Log in</button>
+            <p class="text-center text-sm">Do not have an account? <span onclick="navigateTo('page-signup')" class="text-red-500 cursor-pointer">Signup</span></p>
         </div>
-        <p onclick="navigateTo('page-signup')" class="mt-6 text-emerald-400 cursor-pointer hover:underline">New here? Create Account</p>
     </div>
 
-    <div id="page-signup" class="page-screen flex flex-col justify-center items-center p-6 bg-black min-h-screen text-center">
-        <h1 class="text-3xl text-emerald-400 font-bold mb-8">CREATE ACCOUNT</h1>
-        <div class="w-full max-w-xs space-y-4">
-            <input type="text" placeholder="Username" class="w-full p-3 bg-gray-900 border border-emerald-500 text-white rounded focus:outline-none">
-            <input type="email" placeholder="Email" class="w-full p-3 bg-gray-900 border border-emerald-500 text-white rounded focus:outline-none">
-            <input type="password" placeholder="Password" class="w-full p-3 bg-gray-900 border border-emerald-500 text-white rounded focus:outline-none">
-            <button onclick="navigateTo('page-home')" class="w-full bg-emerald-500 p-3 text-black font-bold rounded hover:bg-emerald-400 transition">REGISTER</button>
+    <div id="page-signup" class="page-screen flex flex-col items-center p-6 bg-black min-h-screen text-white">
+        <div class="w-full max-w-sm flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-emerald-500">METASPHERE</h1>
+            <button class="text-xs border border-emerald-500 px-3 py-1 rounded">Support</button>
         </div>
-        <p onclick="navigateTo('page-login')" class="mt-6 text-emerald-400 cursor-pointer hover:underline">Back to Login</p>
+        <div class="w-full max-w-sm space-y-4">
+            <p onclick="navigateTo('page-login')" class="cursor-pointer text-sm">&lt; Back</p>
+            <h2 class="text-xl font-bold">Create your Metasphere account</h2>
+            <p class="text-xs text-gray-400">Make an earning from NFTs by royalty</p>
+            <input type="email" placeholder="Email" class="w-full p-3 bg-gray-900 border border-emerald-500 rounded">
+            <input type="password" placeholder="Password" class="w-full p-3 bg-gray-900 border border-emerald-500 rounded">
+            <input type="password" placeholder="Confirm password" class="w-full p-3 bg-gray-900 border border-emerald-500 rounded">
+            <ul class="text-[10px] text-gray-400 list-disc pl-4 space-y-1">
+                <li>8 characters, one uppercase, one lowercase, one number</li>
+            </ul>
+            <label class="flex items-center text-xs space-x-2">
+                <input type="checkbox"> <span>I agree to the Terms of use, Privacy policy.</span>
+            </label>
+            <button onclick="navigateTo('page-home')" class="w-full bg-emerald-500 p-3 text-black font-bold rounded">Continue</button>
+        </div>
     </div>
         
         <div id="page-home" class="page-screen flex-col justify-between p-6">
