@@ -681,5 +681,14 @@
             compileStoreMarketplaceGrid();
         });
     </script>
+    <script>
+    function navigateTo(pageId) {
+        // Sabhi pages ko hata do
+        document.querySelectorAll('.page-screen').forEach(p => p.classList.remove('active'));
+        // Sirf target page ko dikhao
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
 </body>
 </html>
